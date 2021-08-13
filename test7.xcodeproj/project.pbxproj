@@ -11,6 +11,14 @@
 		6BDAA7E026C5E2AE0023A66F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA7DF26C5E2AE0023A66F /* ContentView.swift */; };
 		6BDAA7E226C5E2B00023A66F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAA7E126C5E2B00023A66F /* Assets.xcassets */; };
 		6BDAA7E526C5E2B00023A66F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDAA7E426C5E2B00023A66F /* Preview Assets.xcassets */; };
+		6BDAA7ED26C5FAF00023A66F /* QuizCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA7EC26C5FAF00023A66F /* QuizCard.swift */; };
+		6BDAA7F026C5FE080023A66F /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA7EE26C5FE080023A66F /* Main.xcdatamodeld */; };
+		6BDAA7F626C6A9130023A66F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA7F526C6A9130023A66F /* Persistence.swift */; };
+		6BDAA7FA26C6B0CB0023A66F /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA7F926C6B0CB0023A66F /* QuizView.swift */; };
+		6BDAA7FC26C6B34E0023A66F /* AddQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA7FB26C6B34E0023A66F /* AddQuiz.swift */; };
+		6BDAA7FF26C6CAE40023A66F /* QuizDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA7FE26C6CAE40023A66F /* QuizDescriptionView.swift */; };
+		6BDAA80126C6E2BB0023A66F /* AddQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA80026C6E2BB0023A66F /* AddQuestion.swift */; };
+		6BDAA80326C6E7390023A66F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDAA80226C6E7390023A66F /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,14 @@
 		6BDAA7E126C5E2B00023A66F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BDAA7E426C5E2B00023A66F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6BDAA7E626C5E2B00023A66F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BDAA7EC26C5FAF00023A66F /* QuizCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCard.swift; sourceTree = "<group>"; };
+		6BDAA7EF26C5FE080023A66F /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		6BDAA7F526C6A9130023A66F /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		6BDAA7F926C6B0CB0023A66F /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
+		6BDAA7FB26C6B34E0023A66F /* AddQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuiz.swift; sourceTree = "<group>"; };
+		6BDAA7FE26C6CAE40023A66F /* QuizDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDescriptionView.swift; sourceTree = "<group>"; };
+		6BDAA80026C6E2BB0023A66F /* AddQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestion.swift; sourceTree = "<group>"; };
+		6BDAA80226C6E7390023A66F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,11 +68,14 @@
 		6BDAA7DC26C5E2AE0023A66F /* test7 */ = {
 			isa = PBXGroup;
 			children = (
+				6BDAA7FD26C6C0EA0023A66F /* Views */,
 				6BDAA7DD26C5E2AE0023A66F /* test7App.swift */,
-				6BDAA7DF26C5E2AE0023A66F /* ContentView.swift */,
+				6BDAA7EE26C5FE080023A66F /* Main.xcdatamodeld */,
 				6BDAA7E126C5E2B00023A66F /* Assets.xcassets */,
 				6BDAA7E626C5E2B00023A66F /* Info.plist */,
 				6BDAA7E326C5E2B00023A66F /* Preview Content */,
+				6BDAA7F526C6A9130023A66F /* Persistence.swift */,
+				6BDAA80226C6E7390023A66F /* Model.swift */,
 			);
 			path = test7;
 			sourceTree = "<group>";
@@ -67,6 +86,19 @@
 				6BDAA7E426C5E2B00023A66F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6BDAA7FD26C6C0EA0023A66F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6BDAA7DF26C5E2AE0023A66F /* ContentView.swift */,
+				6BDAA7F926C6B0CB0023A66F /* QuizView.swift */,
+				6BDAA7FB26C6B34E0023A66F /* AddQuiz.swift */,
+				6BDAA7EC26C5FAF00023A66F /* QuizCard.swift */,
+				6BDAA7FE26C6CAE40023A66F /* QuizDescriptionView.swift */,
+				6BDAA80026C6E2BB0023A66F /* AddQuestion.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +172,14 @@
 			files = (
 				6BDAA7E026C5E2AE0023A66F /* ContentView.swift in Sources */,
 				6BDAA7DE26C5E2AE0023A66F /* test7App.swift in Sources */,
+				6BDAA80126C6E2BB0023A66F /* AddQuestion.swift in Sources */,
+				6BDAA7F026C5FE080023A66F /* Main.xcdatamodeld in Sources */,
+				6BDAA7ED26C5FAF00023A66F /* QuizCard.swift in Sources */,
+				6BDAA80326C6E7390023A66F /* Model.swift in Sources */,
+				6BDAA7FF26C6CAE40023A66F /* QuizDescriptionView.swift in Sources */,
+				6BDAA7F626C6A9130023A66F /* Persistence.swift in Sources */,
+				6BDAA7FC26C6B34E0023A66F /* AddQuiz.swift in Sources */,
+				6BDAA7FA26C6B0CB0023A66F /* QuizView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +366,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6BDAA7EE26C5FE080023A66F /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6BDAA7EF26C5FE080023A66F /* Main.xcdatamodel */,
+			);
+			currentVersion = 6BDAA7EF26C5FE080023A66F /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6BDAA7D226C5E2AE0023A66F /* Project object */;
 }
