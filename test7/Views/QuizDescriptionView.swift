@@ -9,6 +9,8 @@ import SwiftUI
 
 struct QuizDescriptionView: View {
     
+    @Environment(\.managedObjectContext) private var viewContext
+    
     var quiz: Quiz
     
     var body: some View {
@@ -34,6 +36,12 @@ struct QuizDescriptionView: View {
                 .padding()
             
             Spacer()
+            
+            ForEach (quiz.questions!.allObjects as! [Question]) { index in
+            
+                Text(index.stem ?? "no stem")
+            }
+                
         }
         .padding(.horizontal)
         
