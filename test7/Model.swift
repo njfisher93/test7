@@ -12,5 +12,18 @@ class QuestionsHold: Identifiable, Decodable {
     var stem: String = ""
     var explanation = ""
     var correctIndex = 1
-    var answers = [""]
+    var answerAChoice = ""
+    var answerBChoice = ""
+    
 }
+
+class AnswerAHold: Identifiable, Decodable {
+    var answerChoice: String
+    var isCorrect: Bool
+}
+
+class AnswerBHold: Identifiable, Decodable {
+    var answerChoice: String
+    var isCorrect: Bool
+}
+

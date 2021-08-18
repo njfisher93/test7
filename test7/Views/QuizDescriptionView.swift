@@ -40,6 +40,8 @@ struct QuizDescriptionView: View {
             ForEach (quiz.questions!.allObjects as! [Question]) { index in
             
                 Text(index.stem ?? "no stem")
+                Text(index.answerAChoice ?? "no choice")
+                Text(index.answerBChoice ?? "no choice")
             }
                 
         }

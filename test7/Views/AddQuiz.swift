@@ -105,7 +105,8 @@ struct AddQuiz: View {
             let question = Question(context: viewContext)
             question.id = UUID()
             question.stem = q.stem
-            question.answers = q.answers
+            question.answerAChoice = q.answerAChoice
+            question.answerBChoice = q.answerBChoice
             question.explanation = q.explanation
             
             quiz.addToQuestions(question)

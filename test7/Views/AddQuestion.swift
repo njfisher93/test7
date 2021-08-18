@@ -14,9 +14,8 @@ struct AddQuestion: View {
     @State private var stem = ""
     @State private var explanation = ""
     @State private var correctIndex = 1
-    @State private var answers = [""]
-    @State private var answer1 = ""
-    @State private var answer2 = ""
+    @State private var answerAchoice = ""
+    @State private var answerBchoice = ""
     
     var body: some View {
     
@@ -34,13 +33,13 @@ struct AddQuestion: View {
             HStack {
                 Text("A: ")
                     .bold()
-                TextField("loop diuretic", text: $answer1)
+                TextField("loop diuretic", text: $answerAchoice)
             }
             
             HStack {
                 Text("B: ")
                     .bold()
-                TextField("thiazide diuretic", text: $answer2)
+                TextField("thiazide diuretic", text: $answerBchoice)
             }
             
             HStack {
@@ -50,14 +49,14 @@ struct AddQuestion: View {
             }
             
             Button("Add Question") {
-                
-                answers.append(answer1)
-                answers.append(answer2)
+            
                 
                 let q = QuestionsHold()
                 q.id = UUID()
                 q.stem = stem
                 q.explanation = explanation
+                q.answerAChoice = answerAchoice
+                q.answerBChoice = answerBchoice
                 questions.append(q)
                 
                 stem = ""
