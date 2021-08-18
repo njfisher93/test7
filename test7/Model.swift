@@ -13,7 +13,15 @@ class QuestionsHold: Identifiable, Decodable {
     var explanation = ""
     var correctIndex = 1
     var answerAChoice = ""
+    var answerAisCorrect = false
     var answerBChoice = ""
+    var answerBisCorrect = false
+    var answerCChoice = ""
+    var answerCisCorrect = false
+    var answerDChoice = ""
+    var answerDisCorrect = false
+    var answerEChoice = ""
+    var answerEisCorrect = false
     
 }
 

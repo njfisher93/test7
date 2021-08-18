@@ -21,21 +21,15 @@ struct QuizDescriptionView: View {
             Text(quiz.title ?? "")
                 .font(.title)
         
-            
+            Text(quiz.specialty ?? "")
+                .fontWeight(.light)
             
             Text("By: \(quiz.author ?? "")")
                 .fontWeight(.ultraLight)
-                
             
-        
-            
-            Text(quiz.specialty ?? "")
-                .fontWeight(.light)
-                
-            
-        
             Text(quiz.about ?? "")
-                .padding()
+                .padding(.vertical, 20)
+
             
             Spacer()
             
@@ -43,11 +37,15 @@ struct QuizDescriptionView: View {
             Button(action: {
                 isShowingQuiz.toggle()
             }) {
-                ZStack {
+                ZStack (alignment: .center){
                     RoundedRectangle(cornerRadius: 10)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.green)
+                        .opacity(0.5)
+                        .aspectRatio(CGSize(width: 335, height: 100), contentMode: .fit)
+                        
                     Text("Start Quiz")
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
+                        .font(.title)
             }
                 .sheet(isPresented: $isShowingQuiz, onDismiss: didDismiss) {
                  QuizView(quiz: quiz)
@@ -76,9 +74,10 @@ struct QuizDescriptionView: View {
             } */
                 
         }
-        .padding(.horizontal)
+        
         
     }
+        .padding()
         
 }
     func didDismiss() {

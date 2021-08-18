@@ -40,11 +40,13 @@ struct AddQuiz: View {
                 Button("Add") {
                     // Add the quiz to core data
                     addQuiz()
+                    
                     // Clear the form
                     title = ""
                     author = ""
                     specialty = ""
                     about = ""
+                    questions = [QuestionsHold]()
                 }
             }
             .padding()
@@ -107,6 +109,9 @@ struct AddQuiz: View {
             question.stem = q.stem
             question.answerAChoice = q.answerAChoice
             question.answerBChoice = q.answerBChoice
+            question.answerCChoice = q.answerCChoice
+            question.answerDChoice = q.answerDChoice
+            question.answerEChoice = q.answerEChoice
             question.explanation = q.explanation
             
             quiz.addToQuestions(question)
