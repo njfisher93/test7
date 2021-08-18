@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G80" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20G71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
         <attribute name="answerAChoice" optional="YES" attributeType="String"/>
         <attribute name="answerAisCorrect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="answerBChoice" optional="YES" attributeType="String"/>
         <attribute name="answerBisCorrect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="correctIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="answerCChoice" optional="YES" attributeType="String"/>
+        <attribute name="answerCisCorrect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="answerDChoice" optional="YES" attributeType="String"/>
+        <attribute name="answerDisCorrect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="answerEChoice" optional="YES" attributeType="String"/>
+        <attribute name="answeredCorrectly" optional="YES" attributeType="Boolean" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="answerEisCorrect" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="explanation" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="questionAnswered" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="stem" optional="YES" attributeType="String"/>
         <relationship name="quiz" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Quiz" inverseName="questions" inverseEntity="Quiz"/>
     </entity>
@@ -15,12 +22,14 @@
         <attribute name="about" optional="YES" attributeType="String"/>
         <attribute name="author" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="isCompleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="specialty" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="questions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Question" inverseName="quiz" inverseEntity="Question"/>
     </entity>
     <elements>
-        <element name="Question" positionX="107.7591552734375" positionY="-157.5775451660156" width="128" height="178"/>
-        <element name="Quiz" positionX="-277.02099609375" positionY="-85.93807983398438" width="128" height="119"/>
+        <element name="Question" positionX="107.7591552734375" positionY="-157.5775451660156" width="128" height="269"/>
+        <element name="Quiz" positionX="-277.02099609375" positionY="-85.93807983398438" width="128" height="149"/>
     </elements>
 </model>

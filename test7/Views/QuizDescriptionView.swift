@@ -10,12 +10,14 @@ import SwiftUI
 struct QuizDescriptionView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
+    @State private var isShowingQuiz = false
     
     var quiz: Quiz
     
     var body: some View {
         
         VStack (alignment: .leading){
+            
             Text(quiz.title ?? "")
                 .font(.title)
         
@@ -37,17 +39,50 @@ struct QuizDescriptionView: View {
             
             Spacer()
             
-            ForEach (quiz.questions!.allObjects as! [Question]) { index in
+            
+            Button(action: {
+                isShowingQuiz.toggle()
+            }) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundColor(.blue)
+                    Text("Start Quiz")
+                        .foregroundColor(.white)
+            }
+                .sheet(isPresented: $isShowingQuiz, onDismiss: didDismiss) {
+                 QuizView(quiz: quiz)
+                }
+            
+           /* NavigationView {
+                NavigationLink(destination: QuizView(quiz: quiz)) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(.blue)
+                        Text("Start Quiz")
+                            .foregroundColor(.white)
+                    }
+            }
+                    }*/
+                        
+                   
+                   
+            
+            
+           /* ForEach (quiz.questions!.allObjects as! [Question]) { index in
             
                 Text(index.stem ?? "no stem")
                 Text(index.answerAChoice ?? "no choice")
                 Text(index.answerBChoice ?? "no choice")
-            }
+            } */
                 
         }
         .padding(.horizontal)
         
     }
+        
 }
-
+    func didDismiss() {
+        //Dismissing action
+    }
+}
 
